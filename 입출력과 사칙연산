@@ -1,0 +1,106 @@
+♥ 1단계 _ 2557번
+
+#include <stdio.h>
+int main(){
+    printf("Hello World!");
+}
+
+♥ 2단계 _ 10718번
+
+#include <stdio.h>
+int main(){
+    printf("강한친구 대한육군\n강한친구 대한육군");
+}
+
+♥3단계 _ 10171번
+
+#include <stdio.h>
+int main(void)
+{
+	printf("\\    /\\\n");
+	printf(" )  ( ')\n");
+	printf("(  /  )\n");
+	printf(" \\(__)|");
+
+}
+
+♥4단계 _ 10172번
+
+#include <stdio.h>
+int main() {
+    printf("|\\_/|\n");
+    printf("|q p|   /}\n");
+    printf("( 0 )\"\"\"\\\n");
+    printf("|\"^\"`    |\n");
+    printf("||_/=\\\\__|\n");
+    return 0;
+}
+
+♥5단계 _ 1000번
+
+#include <stdio.h>
+int main(void) {
+	int a, b;
+	scanf("%d %d", &a, &b);
+	printf("%d", a + b);
+}
+
+♥6단계 _ 1001번
+
+#include <stdio.h>
+int main(void) {
+	int a, b;
+	scanf("%d %d", &a, &b);
+	printf("%d", a - b);
+}
+
+♥7단계 _ 10998번
+
+#include <stdio.h>
+int main(void) {
+	int a, b;
+	scanf("%d %d", &a, &b);
+	printf("%d", a * b);
+}
+
+♥8단계 _ 1008번
+
+#include <stdio.h>
+int main(void) {
+	int a, b;
+	scanf_s("%d %d", &a, &b);
+	printf("%.9f", (double)(a) / b);
+}
+
+♥9단계 _ 10869번
+
+#include <stdio.h>
+int main(void) {
+	int a, b;
+	scanf("%d %d", &a, &b);
+	printf("%d\n%d\n%d\n%d\n%d", a + b, a - b, a * b, a / b, a % b);
+}
+
+♥10단계 _ 10430번
+
+#include <stdio.h>
+int main(void) {
+	int a, b, c;
+	scanf("%d %d %d", &a, &b, &c);
+	printf("%d\n%d\n%d\n%d", (a + b) % c, ((a % c) + (b % c)) % c, (a * b) % c, ((a % c) * (b % c)) % c);
+}
+
+♥11단계 _ 2588번
+
+#include <stdio.h>
+int main(void)
+{
+	int a, b;
+	scanf("%d", &a);
+	scanf("%d", &b);
+	int first = b / 100;
+	int second = (b - 100 * first) / 10;
+	int third = b - 100 * first - 10 * second;
+
+	printf("%d\n%d\n%d\n%d", a * third, a * second, a * first, a * third + a * second * 10 + a * first * 100);
+}
