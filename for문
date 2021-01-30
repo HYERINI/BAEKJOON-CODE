@@ -1,0 +1,145 @@
+♥ 1단계 _ 2739번
+#include <stdio.h>
+int main(void)
+{
+	int num;
+	scanf("%d", &num);
+	for (int i = 1; i < 10; i++)
+	{
+		printf("%d * %d = %d\n", num, i, num * i);
+	}
+}
+
+♥ 2단계 _ 10950번
+#include <stdio.h>
+int main(void)
+{
+	int a, b, answer;
+	scanf("%d\n", &answer);
+
+	for (int i = 0; i < answer; i++)
+	{
+		scanf("%d %d", &a, &b);
+		printf("%d\n", a + b);
+	}
+}
+
+♥ 3단계 _ 8393번
+#include <stdio.h>
+int main(void) {
+	int num, sum = 0;
+	scanf("%d", &num);
+	for (int i = 1; i <= num; i++) {
+		sum += i;
+	}
+	printf("%d", sum);    
+}
+
+♥ 4단계 _ 15552번
+#include <stdio.h>
+int main(void)
+{
+	int a, b, answer;
+	scanf("%d\n", &answer);
+
+	for (int i = 0; i < answer; i++)
+	{
+		scanf("%d %d", &a, &b);
+		printf("%d\n", a + b);
+	}
+}
+
+♥ 5단계 _ 2741번
+#include <stdio.h>
+int main(void) {
+	int num;
+	scanf("%d", &num);
+
+	for (int i = 1; i <= num; i++)
+	{
+		printf("%d\n", i);
+	}
+}
+
+♥ 6단계 _ 2742번
+#include <stdio.h>
+int main(void) {
+	int num;
+	scanf("%d", &num);
+
+	for (int i = num; i > 0; i--)
+	{
+		printf("%d\n", i);
+	}
+}
+
+♥ 7단계 _ 11021번
+#include <stdio.h>
+int main(void)
+{
+	int num, a, b;
+	scanf("%d\n", &num);
+
+	for (int i = 1; i <= num; i++)
+	{
+		scanf("%d %d", &a, &b);
+		printf("Case #%d: %d\n", i, a + b);
+	}
+}
+
+♥ 8단계 _ 11022번
+#include <stdio.h>
+int main(void) {
+	int num, a, b;
+	scanf("%d\n", &num);
+
+	for (int i = 1; i <= num; i++) {
+		scanf("%d %d", &a, &b);
+		printf("Case #%d: %d + %d = %d\n", i, a, b, a + b);
+
+♥ 9단계 _ 2438번
+#include <stdio.h>
+int main(void) {
+    int num;
+    scanf("%d", &num);
+    
+    for (int i = 0; i < num; i++) {
+        for (int j = 0; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+♥ 10단계 _ 2439번
+#include <stdio.h>
+int main(void) {
+	int num;
+	scanf("%d", &num);
+
+	for (int i = 0; i < num;i++) {
+		for (int space = 1; space + i < num; space++) {
+			printf(" ");
+		}
+		for (int star = 0; star <= i; star++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+}
+
+♥ 11단계 _ 10871번
+#include <stdio.h>
+int main(void) {
+	int num, max;
+	int answer;
+	scanf("%d %d\n", &num, &max);
+
+	for (int i = 0; i < num; i++) {
+		scanf("%d", &answer);
+		if (answer < max)
+			printf("%d ", answer);
+	}
+}
+
+
