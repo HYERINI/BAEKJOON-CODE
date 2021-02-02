@@ -12,3 +12,15 @@ int main(void) {
 		printf("%d\n", a + b);
 	} 
 }
+
+
+2단계 _ 10951번
+(입력이 끝날 때까지 A+B를 출력하는 문제. EOF에 대해 알아 보세요.)
+
+#include <stdio.h>
+int main(void) {
+	int a, b;
+	while (scanf_s("%d %d",&a, &b) != EOF) {
+		printf("%d\n", a + b);
+	}
+}
