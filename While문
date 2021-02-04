@@ -14,7 +14,7 @@ int main(void) {
 }
 
 
-2단계 _ 10951번
+♥ 2단계 _ 10951번
 (입력이 끝날 때까지 A+B를 출력하는 문제. EOF에 대해 알아 보세요.)
 
 #include <stdio.h>
@@ -23,4 +23,27 @@ int main(void) {
 	while (scanf_s("%d %d",&a, &b) != EOF) {
 		printf("%d\n", a + b);
 	}
+}
+
+
+♥ 3단계 _ 1110번
+
+#include <stdio.h>
+int main(void) {
+	int answer;
+	int ten, one;
+	int num = -1, sum = 0;
+	scanf("%d", &answer);
+
+	ten = answer / 10;
+	one = answer % 10;
+
+	while (answer != num) {
+		num = one * 10 + (ten + one) % 10;
+		ten = num / 10;
+		one = num % 10;
+		sum++;
+	}
+
+	printf("%d\n", sum);
 }
