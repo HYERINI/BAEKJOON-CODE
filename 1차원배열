@@ -98,3 +98,39 @@ int main(void)
 	
 	return 0;
 }
+
+5단계 _ 8958번
+
+#include <stdio.h>
+
+int main(void)
+{
+	int j, n;
+	int score;					
+	int test;				
+
+	scanf("%d", &test);
+
+	for (int i = 0; i < test; i++) {
+		char ox[80] = { 0, };
+		scanf_s("%s", ox);
+		
+		score = 0;
+		j = 0;
+		num = 1;
+		
+		while (ox[j] != '\0') {
+			if (ox[j] == 'O') {
+				score += (num);
+				num++;
+			}
+			else {
+				num = 1;
+			}
+			j++;
+		}
+		printf("%d\n", score);
+	}
+	return 0;
+}
+
