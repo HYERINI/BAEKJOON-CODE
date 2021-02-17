@@ -134,3 +134,41 @@ int main(void)
 	return 0;
 }
 
+6단계 _ 4344번
+
+#include <stdio.h>
+int main(void){
+	int test; 
+	int total = 0;
+	float num;
+	int score[1000] = {0,};
+	
+	float avg = 0;
+	float over = 0;
+	float percent[1000] = {0.0,};
+	
+	scanf_s("%d", &test);
+	
+	for (int i = 0; i < test; i++){
+		scanf_s("%f", &num);
+		
+		total = 0
+		for (int j = 0; j < num; j++){
+			scanf_s("%d", &score[j]);
+			total += score[j];
+		}
+		
+		avg = total / num;
+		over = 0;
+		for (int k = 0; k < num; k++){
+			if (score[k] > avg){
+				over++;
+			}
+			percent[i] = over / num * 100;
+		}
+	}
+	
+	for (int q = 0; q < test; q++){
+		printf("%3.f%%\n", percent[q]);
+	}
+}
