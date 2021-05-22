@@ -47,158 +47,27 @@ int main(void) {
 ♥ 3단계 _ 2577번
 
 #include <stdio.h>
-int main(void) 
-{
-	int a, b, c = 0;
-	int num = 0;
-	int arr[10] = { 0, };
-	scanf_s("%d %d %d", &a, &b, &c);
 
-	int ans = 1;
-	ans = a * b * c;
+int main(void) {
+	int a, b, c, n;
+	int arr[10] = { 0 };
+
+	scanf_s("%d", &a);
+	scanf_s("%d", &b);
+	scanf_s("%d", &c);
+
+	int sum = a * b * c;
+
+	//for문보다 while문이 더 적합
+	while (sum > 0) {
+		n = sum % 10;        //10으로 나눈 나머지 = 증가시킬 인덱스 
+		                     //변수 대입할 때, 등호 왼쪽 : 변수, 등호 오른쪽 : 값
+		sum /= 10;           //sum값을 10으로 나눴을 때의 몫으로 바꿔준다
+		arr[n]++;            //n에 해당하는 인덱스의 값을 1 증가시켜준다
+	}
 	
 
-	for (int i = 0; ans > 0; i++) {
-		num = ans % 10;
-		arr[num] += 1;
-		ans /= 10;
-	}
 	for (int i = 0; i < 10; i++) {
 		printf("%d\n", arr[i]);
-	}
-
-}
-
-♥4단계 _ 3052번
-
-#include <stdio.h>
-
-int main(void) 
-{
-	int a, b, num = 0;
-	int result = 0;
-	int arr[10] = {0};
-	
-	for(int i = 0; i < 10; i++ ) {
-		scanf_s("%d", &n);
-		num %= 42;
-		arr[i] = num;
-	}
-	
-	for(int j = 0; j < 10; j++ ) {
-		int c = 0;
-		for (int k = 0; k < j; k++ ) {
-			if( arr[j] == arr[k] ) 
-			    c++;
-		}
-		if ( c == 0 ) 
-		    result++;
-	}
-	printf("%d", result);
-	
-	return 0;
-}
-
-♥ 5단계 _ 8958번
-
-
-#include <stdio.h>
-
-int main(void)
-{
-	int j, n;
-	int score;					
-	int test;				
-
-	scanf("%d", &test);
-
-	for (int i = 0; i < test; i++) {
-		char ox[80] = { 0, };
-		scanf_s("%s", ox);
-		
-		score = 0;
-		j = 0;
-		num = 1;
-		
-		while (ox[j] != '\0') {
-			if (ox[j] == 'O') {
-				score += (num);
-				num++;
-			}
-			else {
-				num = 1;
-			}
-			j++;
-		}
-		printf("%d\n", score);
-	}
-	return 0;
-}
-
-♥ 6단계 _ 1546번
-#include <stdio.h>
-
-int main(void){
-	int test;
-	double max = 0.0;
-	double sum = 0.0;
-	double score[1000] = {0.0,};
-	
-	scanf_s("%d", &test);
-	
-	for (int i = 0; i < test; i++){
-		scanf_s("%lf", &score[i]);
-	}
-	
-	for (int j = 0; j < test; j++){
-		if ( max < score[j] ){
-			max = score[j];
-		}
-	}
-	
-	for (int k = 0; k < test; k++){
-		score [k] = score[k] / max * 1000.0;
-		sum += score[k];
-	}
-	
-	printf("%0.2lf", sum / test);
-}
-
-♥ 7단계 _ 4344번
-
-#include <stdio.h>
-int main(void){
-	int test; 
-	int total = 0;
-	float num;
-	int score[1000] = {0,};
-	
-	float avg = 0;
-	float over = 0;
-	float percent[1000] = {0.0,};
-	
-	scanf_s("%d", &test);
-	
-	for (int i = 0; i < test; i++){
-		scanf_s("%f", &num);
-		
-		total = 0
-		for (int j = 0; j < num; j++){
-			scanf_s("%d", &score[j]);
-			total += score[j];
-		}
-		
-		avg = total / num;
-		over = 0;
-		for (int k = 0; k < num; k++){
-			if (score[k] > avg){
-				over++;
-			}
-			percent[i] = over / num * 100;
-		}
-	}
-	
-	for (int q = 0; q < test; q++){
-		printf("%3.f%%\n", percent[q]);
 	}
 }
