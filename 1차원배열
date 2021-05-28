@@ -71,3 +71,28 @@ int main(void) {
 		printf("%d\n", arr[i]);
 	}
 }
+
+♥ 4단계 _ 3052번
+
+#include <stdio.h>
+
+int main(void) {
+	int arr[43] = { 0 };
+	int num;
+	int sum = 0;
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%d", &num);
+		int a = num % 42;
+		arr[a]++;
+	}
+
+	for (int j = 0; j < 43; j++) {
+		if (arr[j] != 0)
+			sum += 1;
+		else
+			continue;
+	}
+
+	printf("%d", sum);
+	return 0;
+}
